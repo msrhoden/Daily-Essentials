@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: MAURICIO_RHODEN
+Build-Jdk: 15.0.2
+Implementation-Title: Daily Essentials
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.dell
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/shop
+Created-By: Maven Integration for Eclipse
+

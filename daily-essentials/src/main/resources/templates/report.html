@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header-css">
+</head>
+
+<body>
+
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class="container">
+    	<table class="table table-striped">
+    		<tr>
+    			<th>First Name</th>
+    			<th>Last Name</th>
+    			<th>Age</th>
+    			<th>City</th>
+    			<th>Gender</th>
+    			<th>Details</th>
+    		</tr>
+    	
+    		<tr th:each="user : ${users}">
+    			<td th:text="${user.firstName}"></td>
+		        <td th:text="${user.lastName}"></td>
+		        <td th:text="${user.age}"></td>
+		        <td th:text="${user.city}"></td>
+		        <td th:text="${user.gender}"></td>
+		        <td><a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{'detailsReport/' + ${user.getId()}}" th:text="#{cart.details}"></a></td>
+    		</tr>
+    	
+    	</table>
+    </div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>
